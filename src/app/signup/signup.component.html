@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<h1>This is Signup Form</h1>
+<form #signupform="ngForm" (submit)="formSubmit(signupform)">
+  <input type="text" placeholder="enter your name" name="fname" #myname="ngModel" ngModel required>
+  <br>
+  <span *ngIf="myname.dirty && myname.invalid">Please enter your name</span>
+
+  <br><br>
+  <input type="tel" placeholder="enter your no." name="mobile" #mymobile="ngModel" [minlength]=10 ngModel required><br>
+  <span *ngIf="mymobile.touched && mymobile.invalid">please enter your mobile number</span>
+  <br><br>
+
+
+  <input type="password" placeholder="enter your password" name="password" #mypassword="ngModel" [minlength]=6 ngModel required><br>
+  <span *ngIf="mypassword.touched && mypassword.invalid">please enter your password</span>
+  <br><br>
+  <input type="text" placeholder="Enter your message" name="message" [(ngModel)]="message">
+  <button type="submit" [disabled]="!signupform.valid">SUBMIT</button>
+</form>
+<!-- <h1>{{myname.value}}</h1> -->
+<!-- <h1>Mobile no. {{mymobile.invalid}}</h1>-->
+<h1>{{myname.dirty}}</h1>

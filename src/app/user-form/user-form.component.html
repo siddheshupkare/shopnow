@@ -1,0 +1,20 @@
+<p>user-form works!</p>
+<form [formGroup]=userForm>
+<input type="text" placeholder="Enter your name" formControlName=userName>
+<br><br>
+<input type="email" placeholder="Enter your email" formControlName=userEmail>
+<br><br>
+<input type="tel" placeholder="Enter your No." formControlName= userMob>
+<br><br>
+<div formGroupName="address">
+  <input type="text" placeholder="Enter your street no." formControlName= userStreet>
+  <br><br>
+  <input type="text" placeholder="Enter your State" formControlName= userState>
+  <br><br>
+  <input type="number" placeholder="Enter your postal code" formControlName=userPostal>
+  <br><br>
+</div>
+<button type="submit" (click)="onSubmit()" [disabled]="userForm.invalid">Submit</button>
+<button type="submit" (click)="onReset()">Reset</button>
+<button type="submit" (click)="onSet()">set</button>
+</form>

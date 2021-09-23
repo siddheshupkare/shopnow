@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<h1>
+  This is Home Page
+</h1>
+
+<ul *ngFor="let item of sampleData">
+  <li>{{item.id}} {{item.title}} {{item.releaseDate}}</li>
+  <button mat-button [routerLink]="['products-details',item._id]">Details</button>
+  <button mat-button routerLink="products-details">Details</button>
+</ul>
+
+
+
+<!-- <h1>Sample</h1>
+<a href="#mydiv">go down</a>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla eum facilis vel nam reiciendis est natus doloribus quia dolorem. Omnis deleniti hic aperiam ab?</p>
+
+<div id="mydiv">
+  This division which is down
+</div> -->

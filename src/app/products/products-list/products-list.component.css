@@ -1,0 +1,16 @@
+
+.example-card {
+  max-height: 400px;
+  width:300px;
+  overflow: hidden;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+::ng-deep .mat-card-image
+{
+  max-width: 200px;
+  margin: 20px 20px;
+}

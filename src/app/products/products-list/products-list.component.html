@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<div fxLayout="row wrap" fxLayoutGap="30px grid" *ngIf="!show">
+
+  <div fxLayoutAlign="center" *ngFor="let item of productsdata">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{item.title}}</mat-card-title>
+        <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src={{item.image}}>
+      <mat-card-content>
+        <p>
+          {{item.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" >DETAILS</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    </div>
+</div>
+
+<!-- <div *ngIf="show">
+  <app-products-details [mobName]=mobileName></app-products-details>
+</div> -->
+<!--
+<div *ngFor="let item of productsdata">
+  <h1>{{item.id}}</h1>
+  <h1>{{item.title}}</h1>
+  <h1>{{item.price}}</h1>
+  <img src={{item.image}}>
+  <hr>
+</div> -->
+

@@ -1,0 +1,6 @@
+<p>parent2 works!</p>
+<button mat-raised-button color="primary" (click)="child.increment()">Increment</button>
+<button mat-raised-button color="primary" (click)="child.decrement()">Decrement</button>
+<h1>{{child.myCount}}</h1>
+<hr>
+<app-child2 #child></app-child2>

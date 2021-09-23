@@ -1,0 +1,8 @@
+<p>registration form</p>
+
+<form [formGroup]="regForm" >
+  <input type="text" placeholder="enter your name" formControlName="regName">
+  <br><br>
+  <input type="email" placeholder="enter your email" formControlName="regEmail">
+  <button type="submit" (click)=onSubmit() [disabled]="regForm.invalid">Submit</button>
+</form>

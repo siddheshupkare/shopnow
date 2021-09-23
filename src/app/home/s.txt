@@ -1,0 +1,5 @@
+home
+products
+    ----> products-list
+    ----> products-details
+signup
